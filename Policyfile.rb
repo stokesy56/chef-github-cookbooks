@@ -7,10 +7,13 @@
 name 'node4-github'
 
 # Where to find external cookbooks:
-default_source :supermarket
+
 
 # run_list: chef-client will run these recipes in the order specified.
 run_list 'node4-github::default'
 
 # Specify a custom source for a single cookbook:
 cookbook 'node4-github', path: '.'
+
+cookbook 'nginx', github: 'stokesy56/chef-nginx-cookbook', branch: 'master'
+cookbook 'python', github: 'stokesy56/chef-python-cookbook', branch: 'master'
